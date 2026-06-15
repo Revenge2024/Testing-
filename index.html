@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ณัฐพงศ์ ฤทธิ์จำรัส</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Share+Tech+Mono&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #ff3c3c; --bg: #080808; --card: #111111; --border: #ff3c3c55; --white: #f0f0f0; --dim: #888; }
+    body { background: var(--bg); color: var(--white); font-family: "Sarabun", sans-serif; min-height: 100vh; overflow-x: hidden; position: relative; }
+    body::after { content: ""; position: fixed; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px); pointer-events: none; z-index: 999; }
+    .grid-bg { position: fixed; inset: 0; background-image: linear-gradient(rgba(255,60,60,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,60,60,0.04) 1px, transparent 1px); background-size: 40px 40px; z-index: 0; }
+    .container { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; padding: 60px 24px 80px; }
+    .top-tag { font-family: "Share Tech Mono", monospace; font-size: 11px; color: var(--red); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 32px; display: flex; align-items: center; gap: 10px; }
+    .top-tag::before { content: ""; display: inline-block; width: 20px; height: 2px; background: var(--red); }
+    .name-th { font-family: "Rajdhani", sans-serif; font-size: clamp(36px, 8vw, 64px); font-weight: 700; color: var(--white); line-height: 1; position: relative; display: inline-block; letter-spacing: 2px; }
+    .name-th::before, .name-th::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; }
+    .name-th::before { color: var(--red); animation: glitch1 3s infinite; clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%); }
+    .name-th::after { color: #00eaff; animation: glitch2 3s infinite; clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%); }
+    @keyframes glitch1 { 0%, 90%, 100% { transform: translate(0); opacity: 0; } 91% { transform: translate(-3px, 1px); opacity: 1; } 93% { transform: translate(3px, -1px); opacity: 1; } 95% { transform: translate(0); opacity: 0; } }
+    @keyframes glitch2 { 0%, 90%, 100% { transform: translate(0); opacity: 0; } 92% { transform: translate(3px, 2px); opacity: 1; } 94% { transform: translate(-3px, -2px); opacity: 1; } 96% { transform: translate(0); opacity: 0; } }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="container">
+    <div class="top-tag">Portfolio</div>
+    <h1 class="name-th" data-text="ณัฐพงศ์ ฤทธิ์จำรัส">ณัฐพงศ์ ฤทธิ์จำรัส</h1>
+  </div>
+</body>
+</html>
